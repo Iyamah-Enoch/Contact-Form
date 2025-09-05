@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <div class="form1">
+    <form class="far" action="" id="feedbackForm" method="post">
+      <h1 class="contact">Contact Us</h1>
+      <div class="names">
+        <div class="first">
+      <label for="name">First Name *</label>
+      <br>
+      <input type="text" id="name" name="name" required>
+      </div>
+      <div class="last">
+      <label for="Lastname">Last Name *</label>
+      <br>
+      <input type="text" id="Lastname" name="surname" required>
+      </div>
+      </div>
+      <div class="email">
+      <label for="email">Email Address *</label>
+      <br>
+      <input type="email" id="email" name="email" required>
+      </div>
+      <div class="quality1">
+      <label for="Quality">Quality Type *</label>
+      <br>
+      <div class="quality2">
+        <div class="one">
+      <input type="checkbox" id="Quality" class="Genera" name="General" required value="Quality">
+      <label for="General">General Enquiry</label>
+      </div>
+      <div class="two">
+      <input type="checkbox" id="Quality" class="Genera" name="Support" required value="Quality">
+      <label for="Support">Support Request</label>
+      </div>
+      </div>
+      </div>
+      <div class="message">
+      <label for="message">Message *</label>
+      <br>
+      <textarea id="message" name="message" required></textarea>
+      </div>
+      <br>
+      <div class="consent">
+      <input type="checkbox" id="checkbox" name="checkbox" required>
+      <label for="checkbox">I consent to being contacted by the team *</label>
+      </div>
+      <br>
+      <button type="submit" class="submit">Submit</button>
+      </form>
+      <div class="thankyou">
+        <h2>✅Message Sent</h2>
+        <p>Thanks for completing the form. We'll get back to you shortly.</p>
+      </div>
+  <div class="attribution">
+    <p>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://iyamahenoch.netlify.app/">Iyamah Enoch</a>.</p>
+  </div>
+  <script>
+    const form = document.getElementById('feedbackForm');
+    const thankYouMessage = document.querySelector('.thankyou');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Hide the form
+      form.style.display = 'none';
+
+      // Show the thank you message
+      thankYouMessage.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

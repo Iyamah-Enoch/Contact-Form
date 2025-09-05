@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+}
+
+body {
+    margin-top: 1rem;
+    font-family: 'Karla medium';
+    background-color: hsl(0, 0%, 98%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.far {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30rem;
+    box-sizing: border-box;
+    text-align: center;
+    height: fit-content;
+}
+.contact {
+    text-align: left;
+    font-family: 'Karla medium';
+    margin-bottom: 0.1rem;
+    color: hsl(0, 0%, 14%);
+}
+
+.far .p {
+    font-family: 'Poppins', sans-serif;
+    color: hsl(0, 0%, 59%);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.names {
+    margin-top: 2rem;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.names input {
+    width: 100%;
+    padding: 0.3rem;
+    margin-top: 5px;
+    border: 1px solid hsl(0, 0%, 59%);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+.names label {
+    font-weight: bold;
+    color: hsl(0, 0%, 29%);
+}
+
+.email {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.email label {
+    font-weight: bold;
+    color: hsl(0, 0%, 29%)
+}
+
+.email input {
+    width: 100%;
+    padding: 0.3rem;
+    margin-top: 5px;
+    border: 1px solid hsl(0, 0%, 59%);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+.quality1 {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.quality2 {
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.one, .two {
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 44%;
+    display: flex;
+    align-items: center;
+    height: 1.2rem;
+    gap: 0.3rem;
+    border: hsl(0, 0%, 59%) solid 1px;
+}
+
+.quality1 label {
+    font-weight: bold;
+    color: hsl(0, 0%, 29%);
+}
+
+.message {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.message label {
+    font-weight: bold;
+    color: hsl(0, 0%, 29%);
+}
+
+.message textarea {
+    width: 100%;
+    height: 100px;
+    padding: 0.3rem;
+    margin-top: 5px;
+    border: 1px solid hsl(0, 0%, 59%);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    resize: none;
+}
+
+.consent {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: hsl(0, 0%, 29%);
+}
+
+.submit {
+    width: 100%;
+    background-color: hsl(154, 57%, 34%);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Karla medium';
+}
+
+.attribution {
+    font-size: 0.7rem;
+    text-align: center;
+    color: hsl(0, 0%, 59%);
+    margin-top: 10px;
+}
+
+.submit:hover {
+    background-color: hsl(154, 57%, 24%);
+}
+
+.attribution a {
+    color: hsl(253, 100%, 58%);
+    text-decoration: none;
+}
+
+.thankyou {
+    display: none;
+    text-align: center;
+    font-family: 'Karla medium';
+    color: hsl(0, 0%, 14%);
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: fit-content;
+    padding: 20px;
+}
+
+/* iPad view */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+    .far {
+        width: 90%;
+    }
+    .names {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .one, .two {
+        width: 100%;
+    }
+
+}
+
+/* Mobile view */
+@media only screen 
+  and (max-width: 767px) {
+
+    .far {
+        width: 20rem;
+        padding: 20px;
+    }
+
+    .thankyou {
+        margin-top: 7rem;
+    }
+
+    .names {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .one, .two {
+        width: 100%;
+    }
+    .submit {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    .attribution {
+        font-size: 0.6rem;
+    }
+    .contact {
+        font-size: 1.5rem;
+    }
+    .far .p {
+        font-size: 0.9rem;
+    }
+    .names, .email, .message, .consent {
+        font-size: 0.7rem;
+    }
+    .names input, .email input, .message textarea {
+        font-size: 0.8rem;
+    }
+    .consent {
+        gap: 5px;
+    }
+    .quality2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .one, .two {
+        width: 16rem;
+    }
+
+}
